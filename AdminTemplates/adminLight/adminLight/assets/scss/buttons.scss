@@ -1,0 +1,142 @@
+@import 'variables.scss';
+
+@mixin bg-white {
+    background: #fff;
+    font-weight: $fw-400;
+}
+
+.btn-blue {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #007bff;
+        color: #fff;
+    }
+    color: #007bff;
+    border: 1px solid #007bff;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active {
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-grey {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #6c757d;
+        color: #fff;
+    }
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active {
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-green {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #28a745;
+        color: #fff;
+    }
+    color: #28a745;
+    border: 1px solid #28a745;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active {
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-red {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #dc3545;
+        color: #fff;
+    }
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active {
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-yellow {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #c29614;
+        color: #fff;
+    }
+    color: #c29614;
+    border: 1px solid #c29614;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active {
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-aqua {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #17a2b8;
+        color: #fff;
+    }
+    color: #17a2b8;
+    border: 1px solid #17a2b8;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active{
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-black {
+    @include bg-white;
+    @mixin mouse-effect {
+        background: #111;
+        color: #fff;
+    }
+    color: #111;
+    border: 1px solid #111;
+    &:hover {
+        @include mouse-effect;
+    }
+    &:active {
+        @include mouse-effect;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}

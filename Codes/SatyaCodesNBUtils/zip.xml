@@ -1,0 +1,25 @@
+ <assembly>
+  <id>${version}</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <fileSets>
+    <fileSet>
+      <directory>${basedir}/target/</directory>
+	  <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>SatyaCodesNBUtils-${version}.jar</include>
+      </includes>
+    </fileSet>
+	<fileSet>
+      <directory>${basedir}/target/reports/</directory>
+	  <outputDirectory>/reports</outputDirectory>
+      <includes>
+        <include>**</include>
+      </includes>
+	  <excludes>
+        <exclude>mytrials-sso-batch-dataload*</exclude>
+      </excludes>
+    </fileSet>
+  </fileSets>
+</assembly>

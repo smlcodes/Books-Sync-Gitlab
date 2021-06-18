@@ -1,0 +1,7 @@
+  
+  git remote show origin
+  
+  Fetch URL: https://gitlab.com/satyacodes/books-sync-gitlab.git
+  Push  URL: https://gitlab.com/satyacodes/books-sync-gitlab.git
+  
+  satyacodes@hotmail.com

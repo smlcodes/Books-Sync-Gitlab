@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="4.0"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+	<display-name>DashboardApp</display-name>
+
+<!-- 1. ServletExample -->
+
+	<servlet>
+		<servlet-name>s1</servlet-name>
+		<servlet-class>demo.servlets.ServletApp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s1</servlet-name>
+		<url-pattern>/s1</url-pattern>
+	</servlet-mapping>
+
+
+<!-- 2. GenericServletExample -->
+
+	<servlet>
+		<servlet-name>s2</servlet-name>
+		<servlet-class>demo.servlets.GenericServletExample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s2</servlet-name>
+		<url-pattern>/s2</url-pattern>
+	</servlet-mapping>
+
+
+
+<!-- 3. HttpServletExample -->
+
+	<servlet>
+		<servlet-name>s3</servlet-name>
+		<servlet-class>demo.servlets.HttpServletExample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s3</servlet-name>
+		<url-pattern>/s3</url-pattern>
+	</servlet-mapping>
+
+<!-- 3. HttpServletExample -->
+
+	<servlet>
+		<servlet-name>jspServlet</servlet-name>
+		<servlet-class>demo.servlets.JspServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jspServlet</servlet-name>
+		<url-pattern>/jspServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+
+
+
+</web-app>

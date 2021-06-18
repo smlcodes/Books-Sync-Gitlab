@@ -1,0 +1,223 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>SatyaCodesNBUtils</groupId>
+  <artifactId>SatyaCodesNBUtils</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  
+  
+  <dependencies>
+  
+  <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+<dependency>
+    <groupId>net.sf.jasperreports</groupId>
+    <artifactId>jasperreports</artifactId>
+    <version>6.3.0</version>
+</dependency>
+  
+ <!-- https://mvnrepository.com/artifact/com.jgoodies/jgoodies-forms -->
+<dependency>
+    <groupId>com.jgoodies</groupId>
+    <artifactId>jgoodies-forms</artifactId>
+    <version>1.8.0</version>
+</dependency>
+ 
+<!-- https://mvnrepository.com/artifact/com.jgoodies/jgoodies-common -->
+<dependency>
+    <groupId>com.jgoodies</groupId>
+    <artifactId>jgoodies-common</artifactId>
+    <version>1.8.0</version>
+</dependency>
+  
+ <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.20</version>
+</dependency>
+ 
+ <!-- https://mvnrepository.com/artifact/net.sf.ucanaccess/ucanaccess -->
+<dependency>
+    <groupId>net.sf.ucanaccess</groupId>
+    <artifactId>ucanaccess</artifactId>
+    <version>4.0.1</version>
+</dependency>
+ 
+ <!-- https://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
+<dependency>
+    <groupId>org.hsqldb</groupId>
+    <artifactId>hsqldb</artifactId>
+    <version>2.3.1</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/com.healthmarketscience.jackcess/jackcess -->
+<dependency>
+    <groupId>com.healthmarketscience.jackcess</groupId>
+    <artifactId>jackcess</artifactId>
+    <version>2.1.6</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+<dependency>
+    <groupId>commons-logging</groupId>
+    <artifactId>commons-logging</artifactId>
+    <version>1.1.1</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+<dependency>
+    <groupId>commons-lang</groupId>
+    <artifactId>commons-lang</artifactId>
+    <version>2.6</version>
+</dependency>
+ 
+ 
+ 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.10.2</version>
+		</dependency>
+		
+<!-- https://mvnrepository.com/artifact/org.olap4j/olap4j -->
+<dependency>
+    <groupId>org.olap4j</groupId>
+    <artifactId>olap4j</artifactId>
+    <version>1.2.0</version>
+</dependency>
+
+		<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
+<dependency>
+    <groupId>xml-apis</groupId>
+    <artifactId>xml-apis</artifactId>
+    <version>1.4.01</version>
+</dependency>
+		
+  
+  </dependencies>
+  
+  
+  
+  
+  
+  
+    <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <!-- nothing here -->
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>javaswing.javaapp.LoginGUI</mainClass>
+                </transformer>
+              </transformers>
+              
+              <filters>
+         <filter>
+            <artifact>*:*</artifact>
+               <excludes>
+                  <exclude>META-INF/*.SF</exclude>
+                  <exclude>META-INF/*.DSA</exclude>
+                  <exclude>META-INF/*.RSA</exclude>
+               </excludes>
+            </filter>
+         </filters>
+              
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+<!--       <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.2.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <finalName>SatyaCodesNBUtils</finalName>
+          <descriptors>
+            <descriptor>zip.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin> -->
+
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/reports</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>reports</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+              <nonFilteredFileExtensions>
+                <nonFilteredFileExtension>xls</nonFilteredFileExtension>
+              </nonFilteredFileExtensions>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</project>

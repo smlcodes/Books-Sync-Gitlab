@@ -1,0 +1,13 @@
+{
+  "name": "adminlight-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gulp-rename": "^1.4.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.11.0"
+  }
+}

@@ -1,0 +1,11 @@
+@import 'variables.scss';
+
+// .form-control {
+//     height: 50px;
+// }
+
+form {
+    label {
+        font-weight: $fw-400;
+    }
+}

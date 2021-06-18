@@ -1,0 +1,4 @@
+﻿
+
+Running Hello World Example
+$ docker run hello-world

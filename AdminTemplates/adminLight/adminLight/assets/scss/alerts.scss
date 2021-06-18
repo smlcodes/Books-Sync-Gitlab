@@ -1,0 +1,140 @@
+@import 'variables.scss';
+
+.alert{
+    font-weight: $fw-400;
+    p{
+        margin-bottom: 0;
+    }
+}
+
+.alert-blue {
+    color:#004085;
+    background-color:#cce5ff;
+    border-color: #b8daff;
+    .close {
+        &:hover{
+            color: #004085;
+        }
+    }
+}
+
+.alert-aqua {
+    color:#428a8a;
+    background-color:#b6eaea;
+    border-color:#b6eaea;
+    .close {
+        &:hover{
+            color: #428a8a;
+        }
+    }
+}
+
+.alert-grey {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+    .close {
+        &:hover{
+            color: #383d41;
+        }
+    }
+}
+
+.alert-brown {
+    color:#918a3d;
+    background-color:#c4be7f;
+    border-color:#c4be7f;
+    .close {
+        &:hover{
+            color: #918a3d;
+        }
+    }
+}
+
+.alert-green {
+    color:#155724;
+    background-color:#d4edda;
+    border-color:#c3e6cb;
+    .close {
+        &:hover{
+            color: #155724;
+        }
+    }
+}
+
+.alert-green-neon {
+    color:#416c15;
+    background-color:#80e61a;
+    border-color:#80e61a;
+    .close {
+        &:hover{
+            color: #416c15;
+        }
+    }
+}
+
+.alert-red {
+    color:#7e1e28;
+    background-color:#f8d7da;
+    border-color:#f8d7da;
+    .close {
+        &:hover{
+            color: #7e1e28;
+        }
+    }
+}
+
+.alert-pink {
+    color:#b73475;
+    background-color:#f4a5cd;
+    border-color:#f4a5cd;
+    .close {
+        &:hover{
+            color: #b73475;
+        }
+    }
+}
+
+.alert-purple {
+    color:#9e25c6;
+    background-color:#e6ccee;
+    border-color:#e6ccee;
+    .close {
+        &:hover{
+            color: #9e25c6;
+        }
+    }
+}
+
+.alert-yellow {
+    color:#856404;
+    background-color:#e2cf92;
+    border-color:#e2cf92;
+    .close {
+        &:hover{
+            color: #856404;
+        }
+    }
+}
+
+.alert-grey-dark {
+    color:#fff;
+    background-color:#737475;
+    border-color:#737475;
+    .close {
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+.alert-black {
+    color:#fff;
+    background-color:#393939;
+    border-color:#393939;
+    .close {
+        &:hover{
+            color: #fff;
+        }
+    }
+}

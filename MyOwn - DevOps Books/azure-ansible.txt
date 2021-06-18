@@ -1,0 +1,14 @@
+satyanarayana.kaveti@parexel.com
+Satya@666
+
+Azure node Login
+ssh -i  azurekey.pem azureuser@52.188.71.204
+
+Generate Key in Master Node
+root@ubuntu-Ansi-Server:/home/azureuser# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.

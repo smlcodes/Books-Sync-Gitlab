@@ -1,0 +1,29 @@
+Login to MySQL with EMPTY Passowrd 
+
+Exceute to update Password
+```
+ UPDATE mysql.user SET Password=PASSWORD('root') WHERE User='root' 
+```
+
+update mysql.user SET Password=PASSWORD('root') where User='root';
+
+
+- Go to your `xampp\mysql\bin` folder
+- Edit my.ini and insert skip-grant-tables below [mysqld]
+
+- Restart MySQL
+- Open phpMyAdmin,Set new password for your root user by running 
+```
+ UPDATE mysql.user SET Password=PASSWORD('root') WHERE User='root' 
+```
+- Remove the skip-grant-tables in the my.ini file
+
+- Restrat MySQL
+
+
+
+Click Admin next to MySQL on the XAMPP Control Panel to bring up the phpMyAdmin.
+Choose the mysql database on the left.
+Then choose the SQL tab on the top and run the following statement:
+SET Password=PASSWORD('pwdpwd');
+You also need to update line 21 of the xampp/phpMyAdmin/config.inc.php file with the new password (pwdpwd).

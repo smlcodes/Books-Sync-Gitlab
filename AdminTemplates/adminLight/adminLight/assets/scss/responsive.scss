@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-control {
+        margin-bottom: 5px !important;
+    }
+
+    .loginContainer {
+        margin-top: 0% !important;
+        position: relative;
+        width: 90%;
+        top: 150px;
+        transform: inherit;
+        padding: 0px;
+        left: auto;
+    }
+}

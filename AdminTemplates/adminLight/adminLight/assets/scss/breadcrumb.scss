@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+@mixin active {
+    font-weight: $fw-500;
+    color: #2a4054;
+}
+@mixin ahref {
+    color: #2a4054;
+    font-weight: $fw-400;
+}
+
+#breadcrumb-default {
+    a{
+        @include ahref;
+    }
+    .active{
+        @include active;
+    }
+}
+
+#breadcrumb-transparent {
+    .breadcrumb {
+        background-color: transparent !important;
+        font-weight: $fw-400;
+        a{
+            @include ahref;
+        }
+        .active{
+            @include active;
+        }
+    }
+}
+
+#breadcrumb-icons {
+    .breadcrumb {
+        background-color: transparent !important;
+        font-weight: $fw-400;
+        a{
+            @include ahref;
+        }
+        .active{
+            @include active;
+        }
+        .fa{
+            font-weight: $fw-500;
+            color: #2a4054;
+            pointer-events: none;
+        }
+    }
+}

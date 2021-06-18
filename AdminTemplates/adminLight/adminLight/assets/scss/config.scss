@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap');
+@import 'variables.scss';
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background: #eee;
+    color: #555;
+    font-weight: $fw-300;
+}
+
+.pd-15 {
+    padding: 15px;
+}
+
+.title {
+    font-weight: $fw-400;
+    font-size: 30px;
+    margin-bottom: 0 !important;
+}
+
+.subtitle {
+    font-weight: $fw-300;
+    margin-bottom: 30px !important;
+}
+strong {
+    font-weight: $fw-500;
+}
+
+p {
+    font-weight: $fw-400;
+    margin-bottom: 0 !important;
+}
+
+span {
+    font-weight: $fw-300;
+    margin-bottom: 0 !important;
+}
+ 
+table {
+    font-weight: $fw-400;
+}
+
+.form-control:focus {
+    border-color:#2a4054;
+    outline: 0;
+    box-shadow: none;
+}
+
+a {
+    color: #0f82da;
+    &:hover {
+        color: #0f82da;
+    }
+}
+

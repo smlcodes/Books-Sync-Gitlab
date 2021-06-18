@@ -1,0 +1,32 @@
+@import 'variables.scss';
+
+.table-style {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.page-item.active .page-link {
+    background-color:#2a4054;
+    border-color:#2a4054;
+}
+
+.page-link {
+    color: #2a4054;
+    &:hover{
+        color: #2a4054;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-search {
+    .fa {
+        color:#999 !important;
+        font-weight: $fw-300;
+        cursor: pointer;
+        &:hover {
+            color:#999;
+        }
+    }
+}

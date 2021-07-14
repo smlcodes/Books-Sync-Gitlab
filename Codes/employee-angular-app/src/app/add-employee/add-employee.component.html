@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-body">
+    <div class="col-10 mx-auto">
+      <h2 class="text-center">Add Employee</h2>
+      <!-- <p> {{employeeList[0].name}}</p> -->
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form (ngSubmit)="addFormSumbit()" data-toggle="validator">
+
+          <div class="row mb-3">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="address" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="address" required [(ngModel)]="employee.address" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="salary" class="col-sm-2 col-form-label">Salary</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="salary" required [(ngModel)]="employee.salary"/>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="salary" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-8">
+              <button type="submit" class="btn btn-primary">Add Employee</button> &nbsp;
+              <button type="button" class="btn btn-danger" onclick="this.form.reset();">Clear</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>

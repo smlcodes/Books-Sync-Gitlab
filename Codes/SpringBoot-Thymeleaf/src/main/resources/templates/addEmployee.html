@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ThemeLeaf - EmployeeApp&trade;</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+	crossorigin="anonymous" />
+
+
+</head>
+<body>
+
+
+
+	<div class="container">
+
+		<br /> <br />
+
+		<div class="card-header">
+			<h1 style="text-align: center;">Add Employees</h1>
+		</div>
+
+
+		<div class="card">
+			<div class="card-body">
+
+				<form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+						<input type="text" th:field="*{name}" placeholder="Employee Name" class="form-control mb-4 col-4">
+						
+						<input type="text" th:field="*{address}" placeholder="Employee Adress" class="form-control mb-4 col-4">
+						
+						<input type="text" th:field="*{salary}" placeholder="Employee Salary" class="form-control mb-4 col-4">
+					
+						<button type="submit" class="btn btn-info">Save</button><br/>
+				</form>
+
+				<hr><br/>
+				<a th:href="@{/all}"> Back to Employee List</a>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

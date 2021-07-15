@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ThemeLeaf - EmployeeApp&trade;</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	
+
+</head>
+<body>
+
+
+
+	<div class="container">
+	
+		<br/><br/>
+
+		<div class="card-header">
+			<h1>
+				<a th:href="@{/}" style="font-size: 20px; text-align: left;">
+					Home|</a> <a th:href="@{/addEmployee}"
+					style="font-size: 20px; text-align: left;"> Add Employee |</a> All Employees
+			</h1>
+		</div>
+
+
+		<div class="card">
+			<div class="card-body">
+				<table border="1" class="table table-striped table-responsive-md">
+					<thead>
+						<tr>
+							<th># Emp. ID</th> 
+							<th>Name </th> 
+							<th>Address </th> 
+							<th>Salary </th> 
+							<th>Actions </th> 
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="employee : ${listEmployees}">
+							<td th:text="${employee.id}"></td>
+							<td th:text="${employee.name}"></td>
+							<td th:text="${employee.address}"></td>
+							<td th:text="${employee.salary}"></td>
+							<td>
+                				<a href="/view/{employee.id}" class="btn btn-primary"> <i class="fas fa-eye"></i> </a> <span>&nbsp;</span>
+                				<a href="/update/{employee.id}" class="btn btn-warning"><i class="fas fa-edit"></i> </a> <span>&nbsp;</span>
+              					<a href="/delete/{employee.id}"  class="btn btn-danger"><i class="fas fa-trash-alt"></i> </a>
+              				</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+		</div>
+		
+	
+	</div>
+	</div>
+</body>
+</html>
